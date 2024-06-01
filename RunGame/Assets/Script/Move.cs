@@ -21,7 +21,7 @@ public class Move : MonoBehaviour
         ScoreText();
         if (!isStop)
         {
-            _rigidBody.AddForce(Vector3.right * 1000 * Time.deltaTime, ForceMode.Force);
+            _rigidBody.AddForce(Vector3.right * 800 * Time.deltaTime, ForceMode.Force);
         }
         if (isStop)
         {
@@ -30,11 +30,11 @@ public class Move : MonoBehaviour
         }
         if (Input.GetKeyDown("a"))
         {
-            transform.position += transform.TransformDirection(Vector3.forward) * 1.7f;
+            transform.position += transform.TransformDirection(Vector3.forward) * 2.5f;
         }
         if (Input.GetKeyDown("d"))
         {
-            transform.position += transform.TransformDirection(Vector3.back) * 1.7f;
+            transform.position += transform.TransformDirection(Vector3.back) * 2.5f;
         }
     }
 
