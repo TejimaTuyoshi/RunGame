@@ -49,6 +49,10 @@ public class Move : MonoBehaviour
             other.gameObject.SetActive(false);
             _score++;
         }
+        if (other.gameObject.CompareTag("up"))
+        {
+            _rigidBody.AddForce(Vector3.up * 1000, ForceMode.Force);
+        }
     }
 
     public void ScoreText()
