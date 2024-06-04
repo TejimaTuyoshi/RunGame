@@ -21,7 +21,7 @@ public class Move : MonoBehaviour
         ScoreText();
         if (!isStop)
         {
-            _rigidBody.AddForce(Vector3.right * 800 * Time.deltaTime, ForceMode.Force);
+            _rigidBody.AddForce(Vector3.right * 1 , ForceMode.Force);
         }
         if (isStop)
         {
