@@ -19,9 +19,13 @@ public class Move : MonoBehaviour
     void Update()
     {
         ScoreText();
+    }
+
+    private void FixedUpdate()
+    {
         if (!isStop)
         {
-            _rigidBody.AddForce(Vector3.right *  1.5f, ForceMode.Force);
+            _rigidBody.AddForce(Vector3.right * 20, ForceMode.Force);
         }
         if (isStop)
         {
