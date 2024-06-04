@@ -19,6 +19,14 @@ public class Move : MonoBehaviour
     void Update()
     {
         ScoreText();
+        if (Input.GetKeyDown("a"))
+        {
+            transform.position += transform.TransformDirection(Vector3.forward) * 2.5f;
+        }
+        if (Input.GetKeyDown("d"))
+        {
+            transform.position += transform.TransformDirection(Vector3.back) * 2.5f;
+        }
     }
 
     private void FixedUpdate()
@@ -31,14 +39,6 @@ public class Move : MonoBehaviour
         {
             _rigidBody.AddForce(Vector3.right * 0, ForceMode.Force);
             Time.timeScale = 0.0f;
-        }
-        if (Input.GetKeyDown("a"))
-        {
-            transform.position += transform.TransformDirection(Vector3.forward) * 2.5f;
-        }
-        if (Input.GetKeyDown("d"))
-        {
-            transform.position += transform.TransformDirection(Vector3.back) * 2.5f;
         }
     }
 
