@@ -65,6 +65,7 @@ public class Move : MonoBehaviour
         if (other.gameObject.CompareTag("Back"))
         {
             transform.position = new Vector3(0,1,0);
+            other.gameObject.SetActive(false);
         }
     }
 
