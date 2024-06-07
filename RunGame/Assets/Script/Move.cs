@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,7 +7,6 @@ public class Move : MonoBehaviour
     [SerializeField] Text text;
     bool isStop = false;
     int _score = 0;
-    float _power = 2.5f;
     void Awake()
     {
         _rigidBody = GetComponent<Rigidbody>();
@@ -32,10 +28,9 @@ public class Move : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log(Vector3.right * 10);
         if (!isStop)
         {
-            _rigidBody.AddForce(Vector3.right * 20, ForceMode.Force);
+            transform.position += transform.TransformDirection(Vector3.right) * 1f;
         }
         if (isStop)
         {
