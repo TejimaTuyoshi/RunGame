@@ -10,6 +10,7 @@ public class Move : MonoBehaviour
     [SerializeField] Text text;
     bool isStop = false;
     int _score = 0;
+    float _power = 2.5f;
     void Awake()
     {
         _rigidBody = GetComponent<Rigidbody>();
@@ -56,6 +57,14 @@ public class Move : MonoBehaviour
         if (other.gameObject.CompareTag("up"))
         {
             _rigidBody.AddForce(Vector3.up * 1000, ForceMode.Force);
+        }
+        if (other.gameObject.CompareTag("Left"))
+        {
+            transform.position += transform.TransformDirection(Vector3.back) * 2.5f;
+        }
+        if (other.gameObject.CompareTag("Right"))
+        {
+            transform.position += transform.TransformDirection(Vector3.forward) * 2.5f;
         }
     }
 
