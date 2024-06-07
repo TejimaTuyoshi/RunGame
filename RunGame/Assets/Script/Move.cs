@@ -62,6 +62,10 @@ public class Move : MonoBehaviour
         {
             transform.position += transform.TransformDirection(Vector3.forward) * 2.5f;
         }
+        if (other.gameObject.CompareTag("Back"))
+        {
+            transform.position = new Vector3(0,1,0);
+        }
     }
 
     public void ScoreText()
