@@ -32,6 +32,7 @@ public class Move : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Debug.Log(Vector3.right * 10);
         if (!isStop)
         {
             _rigidBody.AddForce(Vector3.right * 20, ForceMode.Force);
