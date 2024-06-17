@@ -62,7 +62,9 @@
   <ItemGroup>
     <Compile Include="Assets\Script\Move.cs" />
     <Compile Include="Assets\Script\ItemScale.cs" />
+    <Compile Include="Assets\Script\Title.cs" />
     <Compile Include="Assets\Script\Item.cs" />
+    <Compile Include="Assets\Script\StartButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Free Stylized Skybox\ReadMe.txt" />
