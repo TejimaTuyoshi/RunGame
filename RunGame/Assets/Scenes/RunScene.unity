@@ -1094,7 +1094,7 @@ GameObject:
   - component: {fileID: 647959939}
   - component: {fileID: 647959938}
   m_Layer: 5
-  m_Name: Panel (1)
+  m_Name: FinishPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2780,7 +2780,7 @@ GameObject:
   - component: {fileID: 1559887548}
   - component: {fileID: 1559887547}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2912,6 +2912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e73ed48767cd13408dca3c8a460c9e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FinishPanel: {fileID: 647959935}
   _rigidBody: {fileID: 1559887547}
   text: {fileID: 1424335954}
 --- !u!1 &1567950338

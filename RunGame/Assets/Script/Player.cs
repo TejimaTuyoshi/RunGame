@@ -1,8 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Move : MonoBehaviour
+public class Player : MonoBehaviour
 {
+    [SerializeField] GameObject FinishPanel;
     [SerializeField] Rigidbody _rigidBody;
     [SerializeField] Text text;
     bool isStop = false;
@@ -44,6 +45,7 @@ public class Move : MonoBehaviour
         if (other.gameObject.CompareTag("stop"))
         {
             isStop = true;
+            FinishPanel.SetActive(true);
         }
         if (other.gameObject.CompareTag("item"))
         {
