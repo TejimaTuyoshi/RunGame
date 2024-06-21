@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject FinishPanel;
     [SerializeField] Rigidbody _rigidBody;
     [SerializeField] Text text;
-    bool isStop = false;
+    bool isStop = true;
     int _score = 0;
     void Awake()
     {
@@ -17,11 +17,11 @@ public class Player : MonoBehaviour
     void Update()
     {
         ScoreText();
-        if (Input.GetKeyDown("a"))
+        if (Input.GetKeyDown("a") && !isStop)
         {
             transform.position += transform.TransformDirection(Vector3.forward) * 2.5f;
         }
-        if (Input.GetKeyDown("d"))
+        if (Input.GetKeyDown("d")&& !isStop)
         {
             transform.position += transform.TransformDirection(Vector3.back) * 2.5f;
         }
@@ -46,6 +46,8 @@ public class Player : MonoBehaviour
         {
             isStop = true;
             FinishPanel.SetActive(true);
+            text.transform.position = new Vector3(520,250,0);
+            text.fontSize = 100;
         }
         if (other.gameObject.CompareTag("item"))
         {
@@ -74,5 +76,10 @@ public class Player : MonoBehaviour
     public void ScoreText()
     {
         text.text = ("Score: " + _score);
+    }
+
+    public void NotMove()
+    {
+        isStop = false;
     }
 }
