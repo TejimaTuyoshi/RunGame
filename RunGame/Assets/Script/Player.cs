@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
         {
             isStop = true;
             FinishPanel.SetActive(true);
-            text.transform.position = new Vector3(520,250,0);
+            text.transform.position = new Vector3(820,400,0);
             text.fontSize = 100;
         }
         if (other.gameObject.CompareTag("item"))
