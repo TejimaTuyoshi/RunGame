@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,11 +6,16 @@ public class Player : MonoBehaviour
 {
     [SerializeField] GameObject FinishPanel;
     [SerializeField] Rigidbody _rigidBody;
+    [SerializeField] AudioClip _jump;
+    [SerializeField] AudioClip _item;
+    [SerializeField] AudioClip _move;
+    AudioSource audioSource;
     [SerializeField] Text text;
     bool isStop = true;
     int _score = 0;
     void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         _rigidBody = GetComponent<Rigidbody>();
     }
 
@@ -19,10 +25,12 @@ public class Player : MonoBehaviour
         ScoreText();
         if (Input.GetKeyDown("a") && !isStop)
         {
+            audioSource.PlayOneShot(_move);
             transform.position += transform.TransformDirection(Vector3.forward) * 2.5f;
         }
         if (Input.GetKeyDown("d")&& !isStop)
         {
+            audioSource.PlayOneShot(_move);
             transform.position += transform.TransformDirection(Vector3.back) * 2.5f;
         }
     }
@@ -51,11 +59,13 @@ public class Player : MonoBehaviour
         }
         if (other.gameObject.CompareTag("item"))
         {
+            audioSource.PlayOneShot(_item);
             other.gameObject.SetActive(false);
             _score++;
         }
         if (other.gameObject.CompareTag("up"))
         {
+            audioSource.PlayOneShot(_jump);
             _rigidBody.AddForce(Vector3.up * 1000, ForceMode.Force);
         }
         if (other.gameObject.CompareTag("Left"))
