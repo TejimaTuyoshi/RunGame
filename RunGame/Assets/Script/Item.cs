@@ -17,7 +17,7 @@ public class Item : MonoBehaviour
             var obj = (GameObject)Resources.Load("Item");
             var collider = obj.AddComponent<BoxCollider>();
             collider.isTrigger = true;
-            Instantiate(obj, new Vector3(_index, _y, _z), Quaternion.identity);
+            Instantiate(obj, new Vector3(_index, _y, _z), Quaternion.Euler(90,90,0));
             obj.tag = "item";
             _index += 5;
         }
