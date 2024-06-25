@@ -63,6 +63,7 @@
     <Compile Include="Assets\Script\OmakeOne\Map.cs" />
     <Compile Include="Assets\Script\ItemScale.cs" />
     <Compile Include="Assets\Script\Title.cs" />
+    <Compile Include="Assets\Script\EndGame.cs" />
     <Compile Include="Assets\Script\Item.cs" />
     <Compile Include="Assets\Script\OmakeOne\AStar.cs" />
     <Compile Include="Assets\Script\StartButton.cs" />
