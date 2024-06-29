@@ -5,6 +5,10 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     [SerializeField] GameObject FinishPanel;
+    [SerializeField] GameObject SecondManager;
+    [SerializeField] GameObject ThirdManager;
+    [SerializeField] GameObject FourthManager;
+    [SerializeField] GameObject FifthManager;
     [SerializeField] Rigidbody _rigidBody;
     [SerializeField] AudioClip _jump;
     [SerializeField] AudioClip _item;

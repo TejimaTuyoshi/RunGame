@@ -3435,6 +3435,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FinishPanel: {fileID: 647959935}
+  SecondManager: {fileID: 0}
+  ThirdManager: {fileID: 0}
+  FourthManager: {fileID: 0}
+  FifthManager: {fileID: 0}
   _rigidBody: {fileID: 1559887547}
   _jump: {fileID: 8300000, guid: eaa98ab0a519ba04f939ef25fc88ba38, type: 3}
   _item: {fileID: 8300000, guid: f8752bb5805524a44b1f83995754a46e, type: 3}
